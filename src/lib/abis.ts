@@ -1,0 +1,3 @@
+import factory from './LaunchFactory.json'; import curve from './BondingCurve.json'; import token from './LauncherToken.json';
+export const factoryAbi=factory as any; export const curveAbi=curve as any; export const tokenAbi=token as any;
+export const multicallAbi=[{type:'function',name:'aggregate3',stateMutability:'payable',inputs:[{name:'calls',type:'tuple[]',components:[{name:'target',type:'address'}, {name:'allowFailure',type:'bool'}, {name:'callData',type:'bytes'}]}],outputs:[{name:'returnData',type:'tuple[]',components:[{name:'success',type:'bool'},{name:'returnData',type:'bytes'}]}]}] as const;
